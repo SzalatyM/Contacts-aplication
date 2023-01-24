@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Contacts_aplication
@@ -24,6 +25,25 @@ namespace Contacts_aplication
         {
 
         }
-        public void 
+        public void DisplayContact(string name)
+        {
+            var contact = constacts.FirstOrDefault(c => c.name == name);
+
+            if(contact == null)
+            {
+                Console.WriteLine("Contact not found");
+            }
+            else
+            {
+                Console.WriteLine($"Name: \n{contact.name}, Number \n{contact.number}, Note \n{contact.note} ");
+            }          
+        }
+        public void DisplayAllContacts()
+        {
+            foreach (Contact display in constacts )
+            {
+                Console.WriteLine(display);
+            }
+        }
     }
 }

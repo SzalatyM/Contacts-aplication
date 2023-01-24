@@ -11,9 +11,9 @@ namespace Contacts_aplication
             name = Name;
             number = Number;
             note = Note;
-    }
-        string name { get; set; }
-        string number { get; set; }
-        string note { get; set; }
+        }
+        public string name { get; set; }
+       public string number { get; set; }
+       public string note { get; set; }
     }
 }
