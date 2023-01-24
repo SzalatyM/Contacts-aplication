@@ -13,6 +13,11 @@ namespace Contacts_aplication
         {
             constacts.Add(contact);
         }
+
+        public void DisplayDetails(Contact contact)
+        {
+            Console.WriteLine($"Name: \n{contact.name}, Number \n{contact.number}, Note \n{contact.note} ");
+        }
         public void DeleteContact(Contact contact)
         {
             constacts.Remove(contact);
@@ -35,14 +40,22 @@ namespace Contacts_aplication
             }
             else
             {
-                Console.WriteLine($"Name: \n{contact.name}, Number \n{contact.number}, Note \n{contact.note} ");
+                DisplayDetails(contact);
             }          
         }
         public void DisplayAllContacts()
         {
-            foreach (Contact display in constacts )
+            foreach (var display in constacts )
             {
-                Console.WriteLine(display);
+                DisplayDetails(display);
+            }
+        }
+        public void DisplayUserInputContact(string input)
+        {
+            var userInput = constacts.Where(c => c.name.Contains(input)).ToList();
+            foreach (var contact in userInput)
+            {
+                DisplayDetails(contact);
             }
         }
     }
