@@ -6,4 +6,8 @@
     <RootNamespace>Contacts_aplication</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Spectre.Console" Version="0.46.0" />
+  </ItemGroup>
+
 </Project>

@@ -7,12 +7,8 @@ namespace Contacts_aplication
 {
     class Phonebook
     {
-        List<Contact> constacts { get; set; }
+       public List<Contact> constacts { get; set; } = new List<Contact>();
 
-        public void AddContact(Contact contact)
-        {
-            constacts.Add(contact);
-        }
 
         public void DisplayDetails(Contact contact)
         {
@@ -30,19 +26,8 @@ namespace Contacts_aplication
         {
 
         }
-        public void DisplayContact(string name)
-        {
-            var contact = constacts.FirstOrDefault(c => c.name == name);
-
-            if(contact == null)
-            {
-                Console.WriteLine("Contact not found");
-            }
-            else
-            {
-                DisplayDetails(contact);
-            }          
-        }
+       
+        
         public void DisplayAllContacts()
         {
             foreach (var display in constacts )
