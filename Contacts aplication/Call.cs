@@ -6,5 +6,9 @@ namespace Contacts_aplication
 {
     class Call
     {
+        public void CallToContact()
+        {
+            Console.WriteLine($"Call to the ... ");
+        }
     }
 }

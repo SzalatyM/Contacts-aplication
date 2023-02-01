@@ -6,27 +6,29 @@ namespace Contacts_aplication
 {
     class AddContact 
     {
-        List<Contact> contacts = new List<Contact>();
-        public void AddContacts()
+        List<Contact> contacts;
+        public static void AddContacts()
         {
             Console.WriteLine("Insert name");
-            var name = Console.ReadLine();
+            var userName = Console.ReadLine();
             Console.WriteLine("Instert number");
-            var number = int.Parse(Console.ReadLine());
-            if (number < 9)
+            var userNumber = Console.ReadLine();
+            int number;                                             
+            if(!(int.TryParse(userNumber, out number)) && userNumber.Length == 9)
             {
-                Console.WriteLine("Insert correct number");
+                Console.WriteLine("Wrong number. Type a correct number.");
                 return;
             }
-        
             Console.WriteLine("Insert a note (max 50 signs)");
             var note = Console.ReadLine();
             if(note.Length > 50)
             {
                 Console.WriteLine("The number of characters has been exceeded.");
             }
-            var newContact = new Contact(name,number,note);
+            var newContact = new Contact(userName,number,note);
             contacts.Add(newContact);
+            Console.WriteLine("____________________________");
+            Console.WriteLine($"\nYou added a new constact. \n Name: {userName} \n Number: {userNumber} \n Note: {note}");
         }
 
     }

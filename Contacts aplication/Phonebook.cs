@@ -18,16 +18,7 @@ namespace Contacts_aplication
         {
             constacts.Remove(contact);
         }
-        public void AddNoteToContact(string text)
-        {
-            
-        }
-        public void RemoveNote()
-        {
 
-        }
-       
-        
         public void DisplayAllContacts()
         {
             foreach (var display in constacts )

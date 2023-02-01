@@ -5,34 +5,24 @@ using System;
 namespace Contacts_aplication
 {
     class Program
-    {      
+    {
         static void Main(string[] args)
         {
-        AddContact addContact = new AddContact();
-            Display display = new Display();
-            Console.WriteLine("Add Contact");
-            Console.WriteLine("Remove Contact");
-            Console.WriteLine("Display all Contacts");
-            Console.WriteLine("Search Contact");
-
-            var userInput = Console.ReadLine();
-
-            switch (userInput)
+            string userInput;
+            do
             {
-                case "1":
-                    addContact.AddContacts();
-                    break;
-                case "2":
-                    display.DisplayContact(name);
-                    break;
-                case "3":
-                    break;
-                case "4":
-                    break;
-                default:
-                    Console.WriteLine("Incorrect choice");
-                    break;
+
+
+                string command = AnsiConsole.Prompt(
+                        new SelectionPrompt<string>()
+                            .Title("\nContacts: ")
+                            .AddChoices("Add Contact", "Remove Contact", "Display all Contacts", "Search Contact"));
+                Commands.Command(command);
+                Console.WriteLine();
+                userInput = Console.ReadLine();
             }
+            while (userInput != "exit");
         }
     }
 }
+        
