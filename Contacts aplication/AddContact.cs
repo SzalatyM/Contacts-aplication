@@ -6,9 +6,9 @@ namespace Contacts_aplication
 {
     class AddContact 
     {
-        List<Contact> contacts;
-        public static void AddContacts()
+        public static void AddContacts() // static?  ? ? 
         {
+            List<Contact> contacts = new List<Contact>();
             Console.WriteLine("Insert name");
             var userName = Console.ReadLine();
             Console.WriteLine("Instert number");

@@ -6,17 +6,15 @@ namespace Contacts_aplication
 {
     class Commands
     {
-        Contact contact;
-        private static Contact _contact;
+        private static AddContact addContact;     // ? ?
         public static void Command(string userInput)
         {
             switch (userInput)
             {
                 case "1":
-                  
+                    AddContact.AddContacts();
                     break;
                 case "2":
-                    
                     break;
                 case "3":
                     

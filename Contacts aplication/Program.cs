@@ -11,8 +11,6 @@ namespace Contacts_aplication
             string userInput;
             do
             {
-
-
                 string command = AnsiConsole.Prompt(
                         new SelectionPrompt<string>()
                             .Title("\nContacts: ")
