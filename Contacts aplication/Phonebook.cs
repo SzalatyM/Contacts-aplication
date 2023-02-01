@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +7,11 @@ namespace Contacts_aplication
 {
     class Phonebook
     {
+<<<<<<< HEAD
+        List<Contact> constacts { get; set; } 
+=======
        public List<Contact> constacts { get; set; } = new List<Contact>();
+>>>>>>> 65c9ed6bdd7e506e0a2308cc7c36eb9edfd62ce2
 
 
         public void DisplayDetails(Contact contact)
